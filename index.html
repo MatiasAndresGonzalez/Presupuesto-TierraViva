@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento Técnico</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Tagesschrift&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h1>Documentación Técnica para el Desarrollo de la Plataforma Tierra Viva (Sabores serranos)</h1>
+
+    <header class="header">
+        <div class="logo">
+            <img src="/img/logo1.png" alt="logo de la empresa">
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li class="activo"><a class="active" href="index.html">Técnico</a></li>
+                <li><a href="modulos.html">Módulos</a></li>
+                <li><a href="presupuesto.html">Presupuesto</a></li>
+            </ul>
+    </header>
+
+    <article class="contenedor">
+        <div>
+            <ol>
+                <li>
+                    <h2>Introducción</h2>
+                    El presente documento detalla las especificaciones técnicas y la identidad visual para el desarrollo
+                    de la plataforma de gestión de la distribuidora de productos artesanales <b>Tierra Viva</b>. Esta
+                    plataforma está diseñada para optimizar los procesos administrativos internos, mejorar el control de
+                    stock y ventas, y ofrecer a los clientes una experiencia sencilla y eficiente para realizar pedidos
+                    y consultas. <br><br>
+                    El objetivo es crear un sistema robusto, seguro y fácil de usar que facilite la gestión de usuarios,
+                    productos, pedidos, pagos y eventos. Además, contará con una interfaz pública para los clientes y
+                    una administración centralizada para el equipo interno. <br><br>
+                    Se plantea el desarrollo en <b>tres etapas claras</b> para facilitar la implementación y seguimiento
+                    del
+                    proyecto: <br><br>
+                    <ul>
+                        <li class="circulo"><b>Etapa 1:</b> Modelado y preparación técnica (base de datos, definición de
+                            flujos y
+                            seguridad).</li>
+                        <li class="circulo"><b>Etapa 2:</b> Desarrollo del sistema de gestión interna (panel
+                            administrativo, módulos
+                            CRUD, control de roles y permisos).</li>
+                        <li class="circulo"><b>Etapa 3:</b> Desarrollo de la web pública y su integración con el sistema
+                            administrativo
+                            para la gestión y visualización de pedidos por parte de los clientes.</li><br>
+                    </ul>
+                    Este documento busca ser una guía clara para el equipo de desarrollo, donde se especifican las
+                    tareas, módulos y funcionalidades para garantizar que todos los involucrados tengan una visión
+                    unificada y concreta de lo que se debe realizar. <br><br>
+                </li>
+                <hr>
+                <li>
+                    <h2>Especificación General del Sistema</h2>
+                    El sistema contemplará dos perfiles: <br><br>
+                    <ul>
+                        <li class="circulo"><b>Administrador:</b> con acceso total a todos los módulos y
+                            funcionalidades.</li>
+                        <li class="circulo"><b>Empleado:</b> con permisos limitados según las tareas asignadas.</li><br>
+                    </ul>
+                    Se implementarán controles de acceso y seguridad para garantizar la privacidad y protección de los
+                    datos. <br><br>
+                </li>
+                <hr>
+                <li>
+                    <h2>Tareas Iniciales Prioritarias</h2>
+                    Antes del desarrollo, se realizarán las siguientes tareas previas: <br><br>
+                    <ul class=>
+                        <li class="circulo">Modelado de base de datos relacional con las entidades:
+                            <ul>
+                                <li class="disco">Usuarios</li>
+                                <li class="disco">Productos</li>
+                                <li class="disco">Pedidos</li>
+                                <li class="disco">Pagos</li>
+                                <li class="disco">Clientes</li>
+                                <li class="disco">Eventos</li>
+                                <li class="disco">Stock</li>
+                            </ul>
+                        </li>
+                        <li class="circulo">Definición de flujos y estados para:
+                            <ul>
+                                <li class="disco">Pedidos: pendiente, en preparación, enviado, entregado</li>
+                                <li class="disco">Pagos: pendiente, parcial, completo</li>
+                            </ul>
+                        </li>
+                        <li class="circulo">Diseño de rutas y seguridad, con control de sesiones, validación y
+                            autenticación.</li>
+                        <li class="circulo">Definición clara de roles y permisos.</li>
+                    </ul><br>
+                </li>
+                <hr>
+                <li>
+                    <h2>Módulos de Funcionalidad del Sistema (con CRUD)</h2>
+                    A continuación, se detallan los módulos funcionales principales, con descripción clara de sus
+                    operaciones y alcance. Las operaciones CRUD (Crear, Leer, Actualizar y Eliminar) están incluidas
+                    donde sean requeridas: <br><br>
+                    <ol start="4">
+                        <li>
+                            <ol style="margin-left: 9px; padding-left: 9px;">
+                                <li>
+                                    <h3>
+                                        Usuarios y Seguridad</h3>
+                                    <ul>
+                                        <li class="circulo">Login con validación de credenciales</li>
+                                        <li class="circulo">Gestión de roles (administrador / empleado)</li>
+                                        <li class="circulo">Control de accesos según permisos</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol start="4">
+                        <li>
+                            <ol start="2" style="margin-left: 9px; padding-left: 9px;">
+                                <li>
+                                    <h3>Clientes</h3>
+                                    <ul>
+                                        <li class="circulo">CRUD de clientes (alta, baja, modificación, consulta)</li>
+                                        <li class="circulo">Registro de datos: nombre, contacto, zona, frecuencia de
+                                            compra</li>
+                                        <li class="circulo">Asociación con pedidos y pagos</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol start="4">
+                        <li>
+                            <ol start="3" style="margin-left: 9px; padding-left: 9px;">
+                                <li>
+                                    <h3>Productos</h3>
+                                    <ul>
+                                        <li class="circulo">CRUD de productos (alta, baja, modificación, consulta)</li>
+                                        <li class="circulo">Carga de imágenes de productos</li>
+                                        <li class="circulo">Categorización de productos</li>
+                                        <li class="circulo">Control automático de stock según pedidos</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol start="4">
+                        <li>
+                            <ol start="4" style="margin-left: 9px; padding-left: 9px;">
+                                <li>
+                                    <h3>Pedidos</h3>
+                                    <ul>
+                                        <li class="circulo">CRUD de pedidos (alta, baja, modificación, consulta)</li>
+                                        <li class="circulo">Seguimiento de estado: pendiente, en preparación, enviado,
+                                            entregado</li>
+                                        <li class="circulo">Asociación con cliente y productos</li>
+                                        <li class="circulo">Historial de pedidos por cliente</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol start="4">
+                        <li>
+                            <ol start="5" style="margin-left: 9px; padding-left: 9px;">
+                                <li>
+                                    <h3>Pagos</h3>
+                                    <ul>
+                                        <li class="circulo">CRUD de pagos (registro, modificación, consulta)</li>
+                                        <li class="circulo">Visualización de deuda total y pagos parciales por cliente
+                                        </li>
+                                        <li class="circulo">Exportación a Excel</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol start="4">
+                        <li>
+                            <ol start="6" style="margin-left: 9px; padding-left: 9px;">
+                                <li>
+                                    <h3>Agenda Interna</h3>
+                                    <ul>
+                                        <li class="circulo">CRUD de eventos y fechas clave (entregas, cobros,
+                                            recordatorios)</li>
+                                        <li class="circulo">Notificaciones internas</li>
+                                        <li class="circulo">Vista tipo calendario</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol start="4">
+                        <li>
+                            <ol start="7" style="margin-left: 9px; padding-left: 9px;">
+                                <li>
+                                    <h3>Panel de Administración</h3>
+                                    <ul>
+                                        <li class="circulo">Dashboard con métricas clave</li>
+                                        <li class="circulo">Acceso y gestión a todos los módulos vía menú</li>
+                                        <li class="circulo">Alertas automáticas (pedidos sin entregar, stock bajo, deuda
+                                            pendiente)</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol start="4">
+                        <li>
+                            <ol start="8" style="margin-left: 9px; padding-left: 9px;">
+                                <li>
+                                    <h3>Reportes y Exportaciones</h3>
+                                    <ul>
+                                        <li class="circulo">Generación de reportes filtrados (fecha, cliente, estado)
+                                        </li>
+                                        <li class="circulo">Exportación de datos a Excel y PDF</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol start="4">
+                        <li>
+                            <ol start="9" style="margin-left: 9px; padding-left: 9px;">
+                                <li>
+                                    <h3>Sitio Web Institucional</h3>
+                                    <ul>
+                                        <li class="circulo">Presentación de la empresa y valores</li>
+                                        <li class="circulo">Catálogo de productos con filtros</li>
+                                        <li class="circulo">Formulario de contacto</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol start="4">
+                        <li>
+                            <ol start="10" style="margin-left: 14px; padding-left: 14px;">
+                                <li>
+                                    <h3>Formulario de Pedido Web</h3>
+                                    <ul>
+                                        <li class="circulo">CRUD parcial: creación de pedidos desde la web</li>
+                                        <li class="circulo">Validación de datos obligatorios</li>
+                                        <li class="circulo">Envío y vinculación automática al sistema administrativo
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h2>Identidad Visual y Logo</h2>
+                    <h3>Descripción del Logo</h3>
+                    El logo de Tierra Viva representa la conexión con la tierra y la artesanía tradicional, mediante una
+                    imagen simple que combina elementos naturales y orgánicos. Su forma remite a una hoja estilizada que
+                    simboliza el crecimiento, la naturaleza y la sustentabilidad, valores centrales de la distribuidora.
+                    <h3>Colores Corporativos</h3>
+                    <ul class="circulo">
+                        <li><b>Verde Tierra (<div class="cuadroVerde"></div>#4CAF50):
+                            </b> Representa la naturaleza, frescura, y el compromiso con
+                            productos artesanales y orgánicos.</li>
+                        <li><b>Marrón Tierra (<div class="cuadroMarron"></div>#795548):
+                            </b> Evoca la tierra, la solidez, y la conexión con lo artesanal
+                            y genuino.</li>
+                        <li><b>Blanco (<div class="cuadroBlanco"></div>#FFFFFF) :</b>
+                            Para generar contraste, limpieza visual y claridad en la interfaz.
+                        </li>
+                    </ul>
+                    <h3>Aplicación Visual</h3>
+                    La plataforma mantendrá una línea visual coherente con los colores corporativos, utilizando el verde
+                    para elementos activos y botones principales, el marrón para títulos y detalles que requieran un
+                    tono cálido y natural, y el blanco para fondos y espacios para garantizar buena legibilidad.
+                    <br><br>
+                    El diseño buscará una estética simple, elegante y funcional, con tipografías claras y un estilo
+                    minimalista que priorice la usabilidad y experiencia del usuario. <br><br>
+                </li>
+                <hr>
+                <li>
+                    <h2>Presupuesto Estimado</h2>
+                    El presupuesto se divide en tres etapas para facilitar la organización del proyecto, la asignación
+                    de recursos y el seguimiento de avances. <br><br>
+
+                    <div class="contieneTabla">
+                        <table>
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>Etapa</th>
+                                <th>Descripción</th>
+                                <th>Tiempo Estimado</th>
+                                <th>Costo Estimado (USD)</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Modelado y Preparación Técnica</td>
+                                <td>1 semana (40 horas)</td>
+                                <td>1,200 - 1,600</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Desarrollo del Sistema de Gestión Interna</td>
+                                <td>3 semanas (120 horas)</td>
+                                <td>3,600 - 4,800</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Desarrollo de la Web Pública e Integración</td>
+                                <td>2 semanas (80 horas)</td>
+                                <td>2,400 - 3,200</td>
+                            </tr>
+                            <tr>
+                                <td>Total Estimado:</td>
+                                <td></td>
+                                <td></td>
+                                <td>7,200 - 9,600</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <b>Nota:</b><br>
+                    <ul>
+                        <li class="circulo">Las tarifas estimadas están basadas en un rango estándar de USD 30 a 40 por
+                            hora.</li>
+                        <li class="circulo">Incluye análisis, diseño, desarrollo backend y frontend, integración y
+                            pruebas básicas.</li>
+                        <li class="circulo">No incluye diseño gráfico avanzado, hosting ni mantenimiento posterior, que
+                            podrían presupuestarse aparte.</li><br>
+                    </ul>
+                </li>
+                <li>
+                    <h2>Conclusión</h2>
+                    Esta documentación presenta una visión clara, organizada y completa del proyecto para el desarrollo
+                    de la plataforma <b>Tierra Viva</b>. Aporta a los desarrolladores la información necesaria para
+                    planificar, diseñar y ejecutar el sistema, asegurando que cada funcionalidad esté correctamente
+                    entendida y alineada con los objetivos del negocio. <br><br>
+                    La división en tres etapas facilita el desarrollo progresivo, permite entregas parciales y un
+                    control de calidad efectivo, garantizando que el sistema final sea robusto, seguro y fácil de usar
+                    tanto para el equipo interno como para los clientes.
+                </li>
+            </ol>
+        </div>
+    </article>
+    <footer>
+        <span>Visitanos en:
+            <a href="index.html" target="_blank">www.tierraviva.com</a>
+        </span><br>
+        <span>
+            derechos recervados &copy; 2025
+        </span>
+    </footer>
+    </footer>
+
+</body>
+
+</html>

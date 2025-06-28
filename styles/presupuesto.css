@@ -1,0 +1,43 @@
+h2{
+    text-decoration: underline 2px solid #FFFFFF;
+}
+
+.disco{
+    list-style: disc;
+}
+
+.circulo{
+    list-style: circle;
+}
+
+.contieneTabla{
+    display: flex;
+    justify-content: first baseline;
+    margin: 0 0 20px 50px;
+}
+
+table{
+    border-collapse: collapse;
+    border: 3px solid #FFFFFF;
+}
+
+th{
+    border: 3px solid #FFFFFF;
+    font-size: 19px;
+    text-align: center;
+    padding: 5px 25px 5px 25px;
+}
+
+.primeraColumna{
+    border: 2px solid #FFFFFF;
+}
+
+td{
+    border: 2px solid #FFFFFF;
+    padding: 5px 85px 5px 85px;
+    text-align: center;
+}
+
+tr:hover{
+    background-color: #693927;
+}

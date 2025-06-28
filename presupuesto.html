@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/presupuesto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Tagesschrift&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h1>PRESUPUESTO GENERAL – Desarrollo de Plataforma Web eCommerce +
+
+        Sistema ERP Interno</h1>
+    <header class="header">
+        <div class="logo">
+            <img src="/img/logo1.png" alt="logo de la empresa">
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Técnico</a></li>
+                <li><a href="modulos.html">Módulos</a></li>
+                <li class="activo"><a class="active" href="presupuesto.html">Presupuesto</a></li>
+            </ul>
+    </header>
+    <div class="contenedor" style="padding: 10px 100px 30px 100px;">
+        <h2>¿Qué se va a desarrollar?</h2>
+        <p>El proyecto contempla el desarrollo de un sistema completo para la gestión de una distribuidora mayorista de
+            productos artesanales, compuesto por dos partes principales:</p>
+        <ol>
+            <li>Tenda Online (eCommerce): un sitio web público donde los clientes mayoristas pueden navegar productos,
+                hacer pedidos y consultar su
+                historial.</li> <br>
+            <li>Sistema Interno de Gestión (ERP): una herramienta privada para uso interno de la empresa, que permite
+                gestionar productos, stock, ventas, compras, clientes, reportes y automa
+                zar tareas administra
+                vas.</li>
+        </ol>
+        <h2>FASE 1 – Diseño UI/UX + Desarrollo Front-End eCommerce + Panel Admin básico</h2>
+        <h3>Objetivo:</h3>
+        <p>Diseñar y desarrollar el sitio web mayorista, con su panel administrativo de productos y gestión de pedidos.
+        </p>
+        <h3>Alcance técnico:</h3>
+        <ul class="disco">
+            <li>Front-End (cliente):</li>
+            <ul class="circulo">
+                <li>Diseño personalizado con identidad visual cálida y profesional.</li>
+                <li>Maquetación en HTML5, CSS3, JavaScript.</li>
+                <li>Framework sugerido: React o Vue.</li>
+                <li>Sitio responsive (adaptado a celulares y tablets).</li>
+            </ul><br>
+            <li>Back-End (servidor):</li>
+            <ul class="circulo">
+                <li>Desarrollo de lógica de negocio (productos, carrito, usuarios).</li>
+                <li>API RESTful para la conexión con el ERP (futura integración).</li>
+                <li>Lenguaje sugerido: Node.js con Express o Laravel (PHP).</li>
+                <li>Base de datos: PostgreSQL o MySQL.</li>
+            </ul><br>
+            <li>Funcionalidades:</li>
+            <ul class="circulo">
+                <li>Registro/Login de clientes.</li>
+                <li>Catálogo de productos con filtros.</li>
+                <li>Carrito de pedidos.</li>
+                <li>Envío de pedido (sin pasarela de pago).</li>
+                <li>Seguimiento de estado de pedido.</li>
+                <li>Panel de administración básico: carga de productos, precios, fotos y categorías.</li>
+                <li>Notifi caciones automáticas por email.</li>
+            </ul>
+        </ul>
+        <h4>Tiempo estimado: 5 semanas</h4>
+        <h4>Costo: $2.500.000 ARS</h4>
+        <h2>FASE 2 – Desarrollo del ERP (Sistema de Gestión Interno)</h2>
+        <h3>Objetivo:</h3>
+        <p>Desarrollar un sistema privado para el equipo interno de la empresa, que permita administrar y centralizar la
+            operación del negocio.</p>
+        <h3>¿Qué es un ERP?</h3>
+        <p>Un ERP (Enterprise Resource Planning) es un sistema que permite gestionar y automatizar áreas clave de una
+            empresa, como stock, compras, ventas y clientes. El objetivo es reducir tareas manuales y tener control
+            total en tiempo real.</p>
+        <h3>Alcance técnico:</h3>
+        <ul class="disco">
+            <li>Desarrollo de un panel completo con acceso restringido para administradores, vendedores, stockistas,
+                etc.</li>
+            <li>Control de permisos según roles.</li>
+            <li>Interfaz desarrollada en React/Vue (Front-End).</li>
+            <li>Backend RESTful en Node.js/Express o Laravel.</li>
+            <li>Base de datos conectada al sistema eCommerce.</li>
+        </ul>
+        <h3>Módulos incluidos:</h3>
+        <ul class="disco">
+            <li>Ventas: registro manual y desde la web, historial, comprobantes (PDF).</li>
+            <li>Stock: ingreso, egreso automático por ventas, alertas de stock bajo.</li>
+            <li>Compras: registro de compras a proveedores, actualización de stock.</li>
+            <li>Clientes: historial de pedidos, preferencias, cuentas corrientes.</li>
+            <li>Productos: carga, edición, categorías, unidades por lote.</li>
+            <li>Reportes: ventas, compras, productos más vendidos, stock, exportación Excel/PDF.</li>
+            <li>Usuarios y Roles: permisos por tipo de usuario.</li>
+        </ul>
+        <h4>Tiempo estimado: 6 semanas</h4>
+        <h4>Costo: $3.500.000 ARS</h4>
+        <h2>FASE 3 – Integración total Web + ERP (sincronización y automatización)</h2>
+        <h3>Objetivo:</h3>
+        <p>Conectar el sitio eCommerce con el sistema ERP para automatizar procesos y evitar la carga doble de datos.
+        </p>
+        <h3>Alcance técnico:</h3>
+        <ul class="disco">
+            <li>Desarrollo de servicios de sincronización entre ERP y eCommerce.</li>
+            <li>API bidireccional entre los dos sistemas.</li>
+            <li>Automatización de procesos clave:</li>
+            <ul class="circulo">
+                <li>Venta online actualiza stock en ERP en tiempo real.</li>
+                <li>Cambios en productos del ERP se refl ejan en la tienda automáticamente.</li>
+                <li>Reportes y estadísticas se actualizan sin intervención manual.</li>
+                <li>Notifi caciones automáticas al cliente y al equipo interno.</li>
+            </ul>
+        </ul>
+        <h3>Beneficios:</h3>
+        <ul class="disco">
+            <li>Ahorro de tiempo en tareas administrativas.</li>
+            <li>Reducción de errores por carga manual.</li>
+            <li>Visibilidad completa del estado del negocio desde un solo sistema.</li>
+        </ul>
+        <h4>Tiempo estimado: 3 semanas</h4>
+        <h4>Costo: $2.000.000 ARS</h4>
+        <h2>RESUMEN GENERAL</h2>
+
+        <div class="contieneTabla">
+
+            <table>
+
+                <colgroup>
+                    <col class="primeraColumna">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+
+                <tr>
+                    <th>Fase</th>
+                    <th>Tiempo estimado</th>
+                    <th>Costo (ARS)</th>
+                </tr>
+                <tr>
+                    <td>Diseño + Tienda Online</td>
+                    <td>5semanas</td>
+                    <td>$2.500.000</td>
+                </tr>
+                <tr>
+                    <td>Desarrollo ERP Interno</td>
+                    <td>6 semanas</td>
+                    <td>$3.500.000</td>
+                </tr>
+                <tr>
+                    <td>Integración y Automatización</td>
+                    <td>3 semanas</td>
+                    <td>$2.000.000</td>
+                </tr>
+                <tr>
+                    <td>TOTAL DEL PROYECTO</td>
+                    <td>14 semanas</td>
+                    <td>$8.000.000</td>
+                </tr>
+            </table>
+        </div>
+        <h4>Consideraciones finales:</h4>
+        <p>El sistema puede entregarse por fases o como desarrollo integral.</p>
+        <p>El presupuesto incluye documentación básica y capacitación en uso.</p>
+        <p>Se ofrece soporte técnico por 60 días posteriores a la entrega fi nal.</p>
+        <p>No incluye infraestructura de hosting ni certifi cación SSL, pero se puede cotizar aparte si se desea.</p>
+
+
+    </div>
+    <footer>
+        <span>Visitanos en:
+            <a href="index.html" target="_blank">www.tierraviva.com</a>
+        </span><br>
+        <span>
+            derechos recervados &copy; 2025
+        </span>
+    </footer>
+    </footer>
+
+</body>
+
+</html>
