@@ -29,100 +29,83 @@
             </ul>
     </header>
     <div class="contenedor">
-        <ol>
-            <li>
-                <h2>MODULO de Autenticación y Roles Entidad</h2>
-                <ul>
-                    <li>Usuario: Login / Logout / Registro</li>
-                    <li>Recuperar contraseña: Enviar mail con código</li>
-                    <li>Rol: Crear rol, asignar permisos, editar permisos, eliminar rol</li>
-                </ul>
+        <h2>Módulos de Funcionalidad del Sistema (con CRUD)</h2>
+        <p>A continuación, se detallan los módulos funcionales principales, con descripción clara de sus operaciones y
+            alcance. Las operaciones CRUD (Crear, Leer, Actualizar y Eliminar) están incluidas donde sean requeridas:
+        </p>
+        <h3>Usuarios y Seguridad</h3>
+        <ul>
+            <li>Login con validación de credenciales</li>
+            <li>Gestión de roles (administrador / empleado)</li>
+            <li>Control de accesos según permisos</li>
+        </ul>
+        </ul>
+        <h3>Clientes</h3>
+        <ul>
+            <li>CRUD de clientes (alta, baja, modificación, consulta)</li>
+            <li>Registro de datos: nombre, contacto, zona, frecuencia de
+                compra</li>
+            <li>Asociación con pedidos y pagos</li>
+        </ul>
+        <h3>Productos</h3>
+        <ul>
+            <li>CRUD de productos (alta, baja, modificación, consulta)</li>
+            <li>Carga de imágenes de productos</li>
+            <li>Categorización de productos</li>
+            <li>Control automático de stock según pedidos</li>
+        </ul>
+        <h3>Pedidos</h3>
+        <ul>
+            <li>CRUD de pedidos (alta, baja, modificación, consulta)</li>
+            <li>Seguimiento de estado: pendiente, en preparación, enviado,
+                entregado</li>
+            <li>Asociación con cliente y productos</li>
+            <li>Historial de pedidos por cliente</li>
+        </ul>
+        <h3>Pagos</h3>
+        <ul>
+            <li>CRUD de pagos (registro, modificación, consulta)</li>
+            <li>Visualización de deuda total y pagos parciales por cliente
             </li>
-            <li>
-                <h2>MODULO de Usuarios (Clientes y Administradores)</h2>
-                <ul>
-                    <li>Nombre, Email, Rol, Contraseña, Estado (activo/inactivo)</li>
-                    <li>Registrar nuevo cliente o admin</li>
-                    <li>Listar usuarios, buscar, filtrar por rol</li>
-                    <li>Editar datos personales, cambiar rol</li>
-                    <li>Baja lógica (no eliminación real, sólo inactivar)</li>
-                </ul>
+            <li>Exportación a Excel</li>
+        </ul>
+        <h3>Agenda Interna</h3>
+        <ul>
+            <li>CRUD de eventos y fechas clave (entregas, cobros,
+                recordatorios)</li>
+            <li>Notificaciones internas</li>
+            <li>Vista tipo calendario</li>
+        </ul>
+        <h3>Panel de Administración</h3>
+        <ul>
+            <li>Dashboard con métricas clave</li>
+            <li>Acceso y gestión a todos los módulos vía menú</li>
+            <li>Alertas automáticas (pedidos sin entregar, stock bajo, deuda
+                pendiente)</li>
+        </ul>
+        <h3>Reportes y Exportaciones</h3>
+        <ul>
+            <li>Generación de reportes filtrados (fecha, cliente, estado)
             </li>
-            <li>
-                <h2>MODULO de Productos</h2>
-                <ul>
-                    <li>Nombre, Categoría, Precio (minorista/mayorista), Descripción, Imágenes, Stock mínimo</li>
-                    <li>Agregar nuevo producto</li>
-                    <li>Ver listado con filtros (categoría, precio, stock bajo)</li>
-                    <li>Editar precio, stock, descripción</li>
-                    <li>Dar de baja el producto (lógica, no física)</li>
-                </ul>
+            <li>Exportación de datos a Excel y PDF</li>
+        </ul>
+        <h3>Sitio Web Institucional</h3>
+        <ul>
+            <li>Presentación de la empresa y valores</li>
+            <li>Catálogo de productos con filtros</li>
+            <li>Formulario de contacto</li>
+        </ul>
+        <h3>Formulario de Pedido Web</h3>
+        <ul>
+            <li>CRUD parcial: creación de pedidos desde la web</li>
+            <li>Validación de datos obligatorios</li>
+            <li>Envío y vinculación automática al sistema administrativo
             </li>
-            <li>
-                <h2>MODULO de Stock</h2>
-                <ul>
-                    <li>Producto, Cantidad, Fecha de ingreso, Proveedor, Lote</li>
-                    <li>Ingresar stock manual o por compra</li>
-                    <li>Ver stock actual, buscar por producto o lote</li>
-                    <li>Corregir stock manualmente (con motivo)</li>
-                    <li>Eliminar entrada de stock (auditable)</li>
-                </ul>
-            </li>
-            <li>
-                <h2>MODULO de Ventas</h2>
-                <ul>
-                    <li>Cliente, Productos vendidos, Forma de pago, Total, Fecha, Estado</li>
-                    <li>Registrar venta web o manual</li>
-                    <li>Ver historial de ventas, filtros por cliente, fecha o producto</li>
-                    <li>Actualizar estado de pedido (Ej: En preparación, Enviado, Entregado)</li>
-                    <li>No se recomienda borrar ventas (solo anulación/estado cancelado)</li>
-                </ul>
-            </li>
-            <li>
-                <h2>MODULO de Compras a Proveedores</h2>
-                <ul>
-                    <li>Proveedor, Productos comprados, Fecha, Monto total</li>
-                    <li>Registrar nueva compra</li>
-                    <li>Consultar historial de compras por proveedor o fecha</li>
-                    <li>Editar compra (solo antes del cierre mensual)</li>
-                    <li>Eliminar compra (opcional, auditable)</li>
-                </ul>
-            </li>
-            <li>
-                <h2>MODULO de Clientes</h2>
-                <ul>
-                    <li>Nombre, CUIT/DNI, Email, Teléfono, Dirección, Estado de cuenta</li>
-                    <li>Alta de nuevo cliente</li>
-                    <li>Buscar cliente, ver historial, estado de cuenta</li>
-                    <li>Editar datos personales</li>
-                    <li>Baja lógica del cliente</li>
-                </ul>
-            </li>
-            <li>
-                <h2>MODULO de Categorías de Producto</h2>
-                <ul>
-                    <li>Nombre, Descripción, Activa/Inactiva</li>
-                    <li>Crear categoría nueva</li>
-                    <li>Listar categorías activas/inactivas</li>
-                    <li>Editar nombre o descripción</li>
-                    <li>Eliminar (baja lógica)</li>
-                </ul>
-            </li>
-            <li>
-                <h2>MODULO de Notificaciones / Mensajes Internos</h2>
-                <ul>
-                    <li>Tipo (mail/sistema), Destinatario, Contenido, Estado (leído/no leído)</li>
-                    <li>Crear notificación (ej: pedido enviado)</li>
-                    <li>Ver bandeja de entrada o historial de mensajes</li>
-                    <li>Marcar como leído/no leído</li>
-                    <li>Eliminar mensaje (opcional, solo para admin)</li>
-                </ul>
-            </li>
-        </ol>
+        </ul>
     </div>
     <footer>
         <span>Visitanos en:
-            <a href="index.html" target="_blank">www.tierraviva.com</a>
+            <a href="index.html" target="_blank">www.saboresserranos.com</a>
         </span><br>
         <span>
             derechos recervados &copy; 2025

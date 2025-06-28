@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <h1>Documentación Técnica para el Desarrollo de la Plataforma Tierra Viva (Sabores serranos)</h1>
+    <h1>Documentación Técnica para el Desarrollo de la Plataforma Sabores serranos</h1>
 
     <header class="header">
         <div class="logo">
@@ -36,7 +36,7 @@
                 <li>
                     <h2>Introducción</h2>
                     El presente documento detalla las especificaciones técnicas y la identidad visual para el desarrollo
-                    de la plataforma de gestión de la distribuidora de productos artesanales <b>Tierra Viva</b>. Esta
+                    de la plataforma de gestión de la distribuidora de productos artesanales <b>Sabores Serranos</b>. Esta
                     plataforma está diseñada para optimizar los procesos administrativos internos, mejorar el control de
                     stock y ventas, y ofrecer a los clientes una experiencia sencilla y eficiente para realizar pedidos
                     y consultas. <br><br>
@@ -106,160 +106,10 @@
                     A continuación, se detallan los módulos funcionales principales, con descripción clara de sus
                     operaciones y alcance. Las operaciones CRUD (Crear, Leer, Actualizar y Eliminar) están incluidas
                     donde sean requeridas: <br><br>
-                    <ol start="4">
-                        <li>
-                            <ol style="margin-left: 9px; padding-left: 9px;">
-                                <li>
-                                    <h3>
-                                        Usuarios y Seguridad</h3>
-                                    <ul>
-                                        <li class="circulo">Login con validación de credenciales</li>
-                                        <li class="circulo">Gestión de roles (administrador / empleado)</li>
-                                        <li class="circulo">Control de accesos según permisos</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol start="4">
-                        <li>
-                            <ol start="2" style="margin-left: 9px; padding-left: 9px;">
-                                <li>
-                                    <h3>Clientes</h3>
-                                    <ul>
-                                        <li class="circulo">CRUD de clientes (alta, baja, modificación, consulta)</li>
-                                        <li class="circulo">Registro de datos: nombre, contacto, zona, frecuencia de
-                                            compra</li>
-                                        <li class="circulo">Asociación con pedidos y pagos</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol start="4">
-                        <li>
-                            <ol start="3" style="margin-left: 9px; padding-left: 9px;">
-                                <li>
-                                    <h3>Productos</h3>
-                                    <ul>
-                                        <li class="circulo">CRUD de productos (alta, baja, modificación, consulta)</li>
-                                        <li class="circulo">Carga de imágenes de productos</li>
-                                        <li class="circulo">Categorización de productos</li>
-                                        <li class="circulo">Control automático de stock según pedidos</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol start="4">
-                        <li>
-                            <ol start="4" style="margin-left: 9px; padding-left: 9px;">
-                                <li>
-                                    <h3>Pedidos</h3>
-                                    <ul>
-                                        <li class="circulo">CRUD de pedidos (alta, baja, modificación, consulta)</li>
-                                        <li class="circulo">Seguimiento de estado: pendiente, en preparación, enviado,
-                                            entregado</li>
-                                        <li class="circulo">Asociación con cliente y productos</li>
-                                        <li class="circulo">Historial de pedidos por cliente</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol start="4">
-                        <li>
-                            <ol start="5" style="margin-left: 9px; padding-left: 9px;">
-                                <li>
-                                    <h3>Pagos</h3>
-                                    <ul>
-                                        <li class="circulo">CRUD de pagos (registro, modificación, consulta)</li>
-                                        <li class="circulo">Visualización de deuda total y pagos parciales por cliente
-                                        </li>
-                                        <li class="circulo">Exportación a Excel</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol start="4">
-                        <li>
-                            <ol start="6" style="margin-left: 9px; padding-left: 9px;">
-                                <li>
-                                    <h3>Agenda Interna</h3>
-                                    <ul>
-                                        <li class="circulo">CRUD de eventos y fechas clave (entregas, cobros,
-                                            recordatorios)</li>
-                                        <li class="circulo">Notificaciones internas</li>
-                                        <li class="circulo">Vista tipo calendario</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol start="4">
-                        <li>
-                            <ol start="7" style="margin-left: 9px; padding-left: 9px;">
-                                <li>
-                                    <h3>Panel de Administración</h3>
-                                    <ul>
-                                        <li class="circulo">Dashboard con métricas clave</li>
-                                        <li class="circulo">Acceso y gestión a todos los módulos vía menú</li>
-                                        <li class="circulo">Alertas automáticas (pedidos sin entregar, stock bajo, deuda
-                                            pendiente)</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol start="4">
-                        <li>
-                            <ol start="8" style="margin-left: 9px; padding-left: 9px;">
-                                <li>
-                                    <h3>Reportes y Exportaciones</h3>
-                                    <ul>
-                                        <li class="circulo">Generación de reportes filtrados (fecha, cliente, estado)
-                                        </li>
-                                        <li class="circulo">Exportación de datos a Excel y PDF</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol start="4">
-                        <li>
-                            <ol start="9" style="margin-left: 9px; padding-left: 9px;">
-                                <li>
-                                    <h3>Sitio Web Institucional</h3>
-                                    <ul>
-                                        <li class="circulo">Presentación de la empresa y valores</li>
-                                        <li class="circulo">Catálogo de productos con filtros</li>
-                                        <li class="circulo">Formulario de contacto</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol start="4">
-                        <li>
-                            <ol start="10" style="margin-left: 14px; padding-left: 14px;">
-                                <li>
-                                    <h3>Formulario de Pedido Web</h3>
-                                    <ul>
-                                        <li class="circulo">CRUD parcial: creación de pedidos desde la web</li>
-                                        <li class="circulo">Validación de datos obligatorios</li>
-                                        <li class="circulo">Envío y vinculación automática al sistema administrativo
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                </li>
                 <li>
-                    <h2>Identidad Visual y Logo</h2>
+                    <h3 style="text-decoration: underline 2px solid #FFFFFF;">Identidad Visual y Logo</h3>
                     <h3>Descripción del Logo</h3>
-                    El logo de Tierra Viva representa la conexión con la tierra y la artesanía tradicional, mediante una
+                    El logo de <b>Sabores Serranos</b> representa la conexión con la tierra y la artesanía tradicional, mediante una
                     imagen simple que combina elementos naturales y orgánicos. Su forma remite a una hoja estilizada que
                     simboliza el crecimiento, la naturaleza y la sustentabilidad, valores centrales de la distribuidora.
                     <h3>Colores Corporativos</h3>
@@ -284,68 +134,12 @@
                 </li>
                 <hr>
                 <li>
-                    <h2>Presupuesto Estimado</h2>
-                    El presupuesto se divide en tres etapas para facilitar la organización del proyecto, la asignación
-                    de recursos y el seguimiento de avances. <br><br>
-
-                    <div class="contieneTabla">
-                        <table>
-                            <colgroup>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                            </colgroup>
-                            <tr>
-                                <th>Etapa</th>
-                                <th>Descripción</th>
-                                <th>Tiempo Estimado</th>
-                                <th>Costo Estimado (USD)</th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Modelado y Preparación Técnica</td>
-                                <td>1 semana (40 horas)</td>
-                                <td>1,200 - 1,600</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Desarrollo del Sistema de Gestión Interna</td>
-                                <td>3 semanas (120 horas)</td>
-                                <td>3,600 - 4,800</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Desarrollo de la Web Pública e Integración</td>
-                                <td>2 semanas (80 horas)</td>
-                                <td>2,400 - 3,200</td>
-                            </tr>
-                            <tr>
-                                <td>Total Estimado:</td>
-                                <td></td>
-                                <td></td>
-                                <td>7,200 - 9,600</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <b>Nota:</b><br>
-                    <ul>
-                        <li class="circulo">Las tarifas estimadas están basadas en un rango estándar de USD 30 a 40 por
-                            hora.</li>
-                        <li class="circulo">Incluye análisis, diseño, desarrollo backend y frontend, integración y
-                            pruebas básicas.</li>
-                        <li class="circulo">No incluye diseño gráfico avanzado, hosting ni mantenimiento posterior, que
-                            podrían presupuestarse aparte.</li><br>
-                    </ul>
-                </li>
-                <li>
                     <h2>Conclusión</h2>
                     Esta documentación presenta una visión clara, organizada y completa del proyecto para el desarrollo
-                    de la plataforma <b>Tierra Viva</b>. Aporta a los desarrolladores la información necesaria para
+                    de la plataforma <b>Sabores Serranos</b>. Aporta a los desarrolladores la información necesaria para
                     planificar, diseñar y ejecutar el sistema, asegurando que cada funcionalidad esté correctamente
                     entendida y alineada con los objetivos del negocio. <br><br>
-                    La división en tres etapas facilita el desarrollo progresivo, permite entregas parciales y un
+                    La división en tres fases facilita el desarrollo progresivo, permite entregas parciales y un
                     control de calidad efectivo, garantizando que el sistema final sea robusto, seguro y fácil de usar
                     tanto para el equipo interno como para los clientes.
                 </li>
@@ -354,7 +148,7 @@
     </article>
     <footer>
         <span>Visitanos en:
-            <a href="index.html" target="_blank">www.tierraviva.com</a>
+            <a href="index.html" target="_blank">www.saboresserranos.com</a>
         </span><br>
         <span>
             derechos recervados &copy; 2025

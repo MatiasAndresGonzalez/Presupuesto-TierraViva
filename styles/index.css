@@ -9,6 +9,10 @@ h2{
     list-style: circle;
 }
 
+ol > li{
+    list-style: none;
+}
+
 .contieneTabla{
     display: flex;
     justify-content:first baseline;
