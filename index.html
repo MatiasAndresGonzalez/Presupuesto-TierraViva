@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documento Técnico</title>
+    <title>Entrevista</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,128 +24,61 @@
         </div>
         <nav class="nav-links">
             <ul>
-                <li class="activo"><a class="active" href="index.html">Técnico</a></li>
+                <li class="activo"><a class="active" href="index.html">Entrevista</a></li>
+                <li><a href="tecnico.html">Técnico</a></li>
                 <li><a href="modulos.html">Módulos</a></li>
                 <li><a href="presupuesto.html">Presupuesto</a></li>
             </ul>
     </header>
 
-    <article class="contenedor">
-        <div>
-            <ol>
-                <li>
-                    <h2>Introducción</h2>
-                    El presente documento detalla las especificaciones técnicas y la identidad visual para el desarrollo
-                    de la plataforma de gestión de la distribuidora de productos artesanales <b>Sabores Serranos</b>. Esta
-                    plataforma está diseñada para optimizar los procesos administrativos internos, mejorar el control de
-                    stock y ventas, y ofrecer a los clientes una experiencia sencilla y eficiente para realizar pedidos
-                    y consultas. <br><br>
-                    El objetivo es crear un sistema robusto, seguro y fácil de usar que facilite la gestión de usuarios,
-                    productos, pedidos, pagos y eventos. Además, contará con una interfaz pública para los clientes y
-                    una administración centralizada para el equipo interno. <br><br>
-                    Se plantea el desarrollo en <b>tres etapas claras</b> para facilitar la implementación y seguimiento
-                    del
-                    proyecto: <br><br>
-                    <ul>
-                        <li class="circulo"><b>Etapa 1:</b> Modelado y preparación técnica (base de datos, definición de
-                            flujos y
-                            seguridad).</li>
-                        <li class="circulo"><b>Etapa 2:</b> Desarrollo del sistema de gestión interna (panel
-                            administrativo, módulos
-                            CRUD, control de roles y permisos).</li>
-                        <li class="circulo"><b>Etapa 3:</b> Desarrollo de la web pública y su integración con el sistema
-                            administrativo
-                            para la gestión y visualización de pedidos por parte de los clientes.</li><br>
-                    </ul>
-                    Este documento busca ser una guía clara para el equipo de desarrollo, donde se especifican las
-                    tareas, módulos y funcionalidades para garantizar que todos los involucrados tengan una visión
-                    unificada y concreta de lo que se debe realizar. <br><br>
-                </li>
-                <hr>
-                <li>
-                    <h2>Especificación General del Sistema</h2>
-                    El sistema contemplará dos perfiles: <br><br>
-                    <ul>
-                        <li class="circulo"><b>Administrador:</b> con acceso total a todos los módulos y
-                            funcionalidades.</li>
-                        <li class="circulo"><b>Empleado:</b> con permisos limitados según las tareas asignadas.</li><br>
-                    </ul>
-                    Se implementarán controles de acceso y seguridad para garantizar la privacidad y protección de los
-                    datos. <br><br>
-                </li>
-                <hr>
-                <li>
-                    <h2>Tareas Iniciales Prioritarias</h2>
-                    Antes del desarrollo, se realizarán las siguientes tareas previas: <br><br>
-                    <ul class=>
-                        <li class="circulo">Modelado de base de datos relacional con las entidades:
-                            <ul>
-                                <li class="disco">Usuarios</li>
-                                <li class="disco">Productos</li>
-                                <li class="disco">Pedidos</li>
-                                <li class="disco">Pagos</li>
-                                <li class="disco">Clientes</li>
-                                <li class="disco">Eventos</li>
-                                <li class="disco">Stock</li>
-                            </ul>
-                        </li>
-                        <li class="circulo">Definición de flujos y estados para:
-                            <ul>
-                                <li class="disco">Pedidos: pendiente, en preparación, enviado, entregado</li>
-                                <li class="disco">Pagos: pendiente, parcial, completo</li>
-                            </ul>
-                        </li>
-                        <li class="circulo">Diseño de rutas y seguridad, con control de sesiones, validación y
-                            autenticación.</li>
-                        <li class="circulo">Definición clara de roles y permisos.</li>
-                    </ul><br>
-                </li>
-                <hr>
-                <li>
-                    <h2>Módulos de Funcionalidad del Sistema (con CRUD)</h2>
-                    A continuación, se detallan los módulos funcionales principales, con descripción clara de sus
-                    operaciones y alcance. Las operaciones CRUD (Crear, Leer, Actualizar y Eliminar) están incluidas
-                    donde sean requeridas: <br><br>
-                <li>
-                    <h3 style="text-decoration: underline 2px solid #FFFFFF;">Identidad Visual y Logo</h3>
-                    <h3>Descripción del Logo</h3>
-                    El logo de <b>Sabores Serranos</b> representa la conexión con la tierra y la artesanía tradicional, mediante una
-                    imagen simple que combina elementos naturales y orgánicos. Su forma remite a una hoja estilizada que
-                    simboliza el crecimiento, la naturaleza y la sustentabilidad, valores centrales de la distribuidora.
-                    <h3>Colores Corporativos</h3>
-                    <ul class="circulo">
-                        <li><b>Verde Tierra (<div class="cuadroVerde"></div>#4CAF50):
-                            </b> Representa la naturaleza, frescura, y el compromiso con
-                            productos artesanales y orgánicos.</li>
-                        <li><b>Marrón Tierra (<div class="cuadroMarron"></div>#795548):
-                            </b> Evoca la tierra, la solidez, y la conexión con lo artesanal
-                            y genuino.</li>
-                        <li><b>Blanco (<div class="cuadroBlanco"></div>#FFFFFF) :</b>
-                            Para generar contraste, limpieza visual y claridad en la interfaz.
-                        </li>
-                    </ul>
-                    <h3>Aplicación Visual</h3>
-                    La plataforma mantendrá una línea visual coherente con los colores corporativos, utilizando el verde
-                    para elementos activos y botones principales, el marrón para títulos y detalles que requieran un
-                    tono cálido y natural, y el blanco para fondos y espacios para garantizar buena legibilidad.
-                    <br><br>
-                    El diseño buscará una estética simple, elegante y funcional, con tipografías claras y un estilo
-                    minimalista que priorice la usabilidad y experiencia del usuario. <br><br>
-                </li>
-                <hr>
-                <li>
-                    <h2>Conclusión</h2>
-                    Esta documentación presenta una visión clara, organizada y completa del proyecto para el desarrollo
-                    de la plataforma <b>Sabores Serranos</b>. Aporta a los desarrolladores la información necesaria para
-                    planificar, diseñar y ejecutar el sistema, asegurando que cada funcionalidad esté correctamente
-                    entendida y alineada con los objetivos del negocio. <br><br>
-                    La división en tres fases facilita el desarrollo progresivo, permite entregas parciales y un
-                    control de calidad efectivo, garantizando que el sistema final sea robusto, seguro y fácil de usar
-                    tanto para el equipo interno como para los clientes.
-                </li>
-            </ol>
-        </div>
-    </article>
+    <div class="contenedor">
+        <h2>Descripción de la entrevista con el cliente</h2>
+        <article>
+            <p>
+                <b>Cliente entrevistado:</b> Responsable de una distribuidora mayorista de
+                productos artesanales del país.
+            </p>
+            <p>
+                <b>Objevo de la entrevista:</b> Relevar las necesidades específicas para el
+                desarrollo de una página web eCommerce que se integre con su sistema de
+                gesón actual.
+            </p>
+            <h2>Conclusión de la entrevista</h2>
+            <p>
+                <b>El objevo principal del sio web</b> es poder mostrar y vender productos artesanales al por mayor, con
+                precios y
+                condiciones para distribuidores.
+            </p>
+            <p>
+                <b>las funcionalidades debe tener:</b> Catálogo dinámico de productos, carrito, pedidos, contacto,
+                integración con
+                el sistema de gesón, control automáco de stock.
+            </p>
+            <p>
+                <b>Los usuarios ulizarán el sistema</b> son clientes mayoristas y administradores internos.
+            </p>
+            <p>
+                <b>Tenen un sistema de gesón actual</b> que gesonan stock, ventas, artículos, compras y clientes de
+                forma
+                interna.
+                El sio web debe integrarse con ese sistema.
+            </p>
+            <p>
+                <b>Desean modificar los productos desde</b> el sistema de gesón interno y la web debe reflejar los
+                cambios
+                automácamente.
+            </p>
+            <p>
+                Por ahora <b>no requieren pasarela de pagos</b>, solo pedidos online, el pago se coordina por transferencia o
+                fuera del sio.
+            </p>
+            <p>
+                <b>Desean un diseño</b> simple, cálido y profesional, con estéca natural y artesanal.
+            </p>
+
+        </article>
+    </div>
+
     <footer>
         <span>Visitanos en:
             <a href="index.html" target="_blank">www.saboresserranos.com</a>
@@ -153,7 +86,6 @@
         <span>
             derechos recervados &copy; 2025
         </span>
-    </footer>
     </footer>
 
 </body>

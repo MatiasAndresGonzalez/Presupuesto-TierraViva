@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento Técnico</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/tecnico.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Tagesschrift&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="/img/te-de-mate.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Documentación Técnica para el Desarrollo de la Plataforma Sabores serranos</h1>
+
+    <header class="header">
+        <div class="logo">
+            <img src="/img/logo1.png" alt="logo de la empresa">
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Entrevista</a></li>
+                <li class="activo"><a class="active" href="tecnico.html">Técnico</a></li>
+                <li><a href="modulos.html">Módulos</a></li>
+                <li><a href="presupuesto.html">Presupuesto</a></li>
+            </ul>
+    </header>
+
+    <article class="contenedor">
+        <div>
+            <article>
+                
+            </article>
+            <ol>
+                <li>
+                    <h2>Introducción</h2>
+                    El presente documento detalla las especificaciones técnicas y la identidad visual para el desarrollo
+                    de la plataforma de gestión de la distribuidora de productos artesanales <b>Sabores Serranos</b>. Esta
+                    plataforma está diseñada para optimizar los procesos administrativos internos, mejorar el control de
+                    stock y ventas, y ofrecer a los clientes una experiencia sencilla y eficiente para realizar pedidos
+                    y consultas. <br><br>
+                    El objetivo es crear un sistema robusto, seguro y fácil de usar que facilite la gestión de usuarios,
+                    productos, pedidos, pagos y eventos. Además, contará con una interfaz pública para los clientes y
+                    una administración centralizada para el equipo interno. <br><br>
+                    Se plantea el desarrollo en <b>tres etapas claras</b> para facilitar la implementación y seguimiento
+                    del
+                    proyecto: <br><br>
+                    <ul>
+                        <li class="circulo"><b>Etapa 1:</b> Modelado y preparación técnica (base de datos, definición de
+                            flujos y
+                            seguridad).</li>
+                        <li class="circulo"><b>Etapa 2:</b> Desarrollo del sistema de gestión interna (panel
+                            administrativo, módulos
+                            CRUD, control de roles y permisos).</li>
+                        <li class="circulo"><b>Etapa 3:</b> Desarrollo de la web pública y su integración con el sistema
+                            administrativo
+                            para la gestión y visualización de pedidos por parte de los clientes.</li><br>
+                    </ul>
+                    Este documento busca ser una guía clara para el equipo de desarrollo, donde se especifican las
+                    tareas, módulos y funcionalidades para garantizar que todos los involucrados tengan una visión
+                    unificada y concreta de lo que se debe realizar. <br><br>
+                </li>
+                <hr>
+                <li>
+                    <h2>Especificación General del Sistema</h2>
+                    El sistema contemplará dos perfiles: <br><br>
+                    <ul>
+                        <li class="circulo"><b>Administrador:</b> con acceso total a todos los módulos y
+                            funcionalidades.</li>
+                        <li class="circulo"><b>Empleado:</b> con permisos limitados según las tareas asignadas.</li><br>
+                    </ul>
+                    Se implementarán controles de acceso y seguridad para garantizar la privacidad y protección de los
+                    datos. <br><br>
+                </li>
+                <hr>
+                <li>
+                    <h2>Tareas Iniciales Prioritarias</h2>
+                    Antes del desarrollo, se realizarán las siguientes tareas previas: <br><br>
+                    <ul class=>
+                        <li class="circulo">Modelado de base de datos relacional con las entidades:
+                            <ul>
+                                <li class="disco">Usuarios</li>
+                                <li class="disco">Productos</li>
+                                <li class="disco">Pedidos</li>
+                                <li class="disco">Pagos</li>
+                                <li class="disco">Clientes</li>
+                                <li class="disco">Eventos</li>
+                                <li class="disco">Stock</li>
+                            </ul>
+                        </li>
+                        <li class="circulo">Definición de flujos y estados para:
+                            <ul>
+                                <li class="disco">Pedidos: pendiente, en preparación, enviado, entregado</li>
+                                <li class="disco">Pagos: pendiente, parcial, completo</li>
+                            </ul>
+                        </li>
+                        <li class="circulo">Diseño de rutas y seguridad, con control de sesiones, validación y
+                            autenticación.</li>
+                        <li class="circulo">Definición clara de roles y permisos.</li>
+                    </ul><br>
+                </li>
+                <hr>
+                    <h3 style="text-decoration: underline 2px solid #FFFFFF;">Identidad Visual y Logo</h3>
+                    <h3>Descripción del Logo</h3>
+                    El logo de <b>Sabores Serranos</b> representa la conexión con la tierra y la artesanía tradicional, mediante una
+                    imagen simple que combina elementos naturales y orgánicos. Su forma remite a una hoja estilizada que
+                    simboliza el crecimiento, la naturaleza y la sustentabilidad, valores centrales de la distribuidora.
+                    <h3>Colores Corporativos</h3>
+                    <ul class="circulo">
+                        <li><b>Verde Tierra (<div class="cuadroVerde"></div>#4CAF50):
+                            </b> Representa la naturaleza, frescura, y el compromiso con
+                            productos artesanales y orgánicos.</li>
+                        <li><b>Marrón Tierra (<div class="cuadroMarron"></div>#795548):
+                            </b> Evoca la tierra, la solidez, y la conexión con lo artesanal
+                            y genuino.</li>
+                        <li><b>Blanco (<div class="cuadroBlanco"></div>#FFFFFF) :</b>
+                            Para generar contraste, limpieza visual y claridad en la interfaz.
+                        </li>
+                    </ul>
+                    <h3>Aplicación Visual</h3>
+                    La plataforma mantendrá una línea visual coherente con los colores corporativos, utilizando el verde
+                    para elementos activos y botones principales, el marrón para títulos y detalles que requieran un
+                    tono cálido y natural, y el blanco para fondos y espacios para garantizar buena legibilidad.
+                    <br><br>
+                    El diseño buscará una estética simple, elegante y funcional, con tipografías claras y un estilo
+                    minimalista que priorice la usabilidad y experiencia del usuario. <br><br>
+                </li>
+                <hr>
+                <li>
+                    <h2>Conclusión</h2>
+                    Esta documentación presenta una visión clara, organizada y completa del proyecto para el desarrollo
+                    de la plataforma <b>Sabores Serranos</b>. Aporta a los desarrolladores la información necesaria para
+                    planificar, diseñar y ejecutar el sistema, asegurando que cada funcionalidad esté correctamente
+                    entendida y alineada con los objetivos del negocio. <br><br>
+                    La división en tres fases facilita el desarrollo progresivo, permite entregas parciales y un
+                    control de calidad efectivo, garantizando que el sistema final sea robusto, seguro y fácil de usar
+                    tanto para el equipo interno como para los clientes.
+                </li>
+            </ol>
+        </div>
+    </article>
+    <footer>
+        <span>Visitanos en:
+            <a href="index.html" target="_blank">www.saboresserranos.com</a>
+        </span><br>
+        <span>
+            derechos recervados &copy; 2025
+        </span>
+    </footer>
+
+</body>
+
+</html>

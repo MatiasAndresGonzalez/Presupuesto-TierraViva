@@ -21,11 +21,11 @@ h1{
 
 .contenedor{
     background-color: #795548;
-    font-size: 18px;
+    font-size: 19px;
     border-radius: 20px;
     border: 2px solid #4CAF50;
     text-align: justify;
-    padding: 10px 80px 10px 80px;
+    padding: 10px 100px 10px 150px;
     margin: 30px 80px 50px 80px;
 }
 

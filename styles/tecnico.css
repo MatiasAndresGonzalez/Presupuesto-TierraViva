@@ -1,0 +1,39 @@
+h2{
+    text-decoration: underline 2px solid #FFFFFF;
+}
+
+.circulo{
+    list-style: disc;
+}
+.disco{
+    list-style: circle;
+}
+
+ol > li{
+    list-style: none;
+}
+
+.cuadroVerde{
+    display: inline-block;
+    background-color: #4CAF50;
+    border: 1px solid black;
+    padding:10px;
+    margin: 3px;
+    margin-bottom: 0;
+}
+.cuadroMarron{
+    display: inline-block;
+    background-color: #795548;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 3px;
+    margin-bottom: 0;
+}
+.cuadroBlanco{
+    display: inline-block;
+    background-color: #FFFFFF;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 3px;
+    margin-bottom: 0;
+}
