@@ -9,10 +9,6 @@ h2{
     list-style: circle;
 }
 
-ol > li{
-    list-style: none;
-}
-
 .cuadroVerde{
     display: inline-block;
     background-color: #4CAF50;
